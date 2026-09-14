@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="id"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260909-01-9e65989","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/cc55fa1b533807c5.telemetry_sdk.js" integrity="sha512-vW7a0U63BNWyPgkdgvdYnLKXjx/E1nZSXBT1dQT4DrVBh7k4yi55jDX0CvlS9/4Dcuktj9yKi+hEm0rq9hBn1w=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMK Smart Al-Muhsin</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/d87b80b4433bab6b.data_sdk.js" integrity="sha512-JKynAZ3aIUkxrmu1y4Enod3283hZsIIaBhOwwM+go3QT3MqYMvKrAZczNoL1jjjyzi8i7cD2EiXs1sP4BPwZ3g=="></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --navy:#092d3e; --teal:#087f72; --gold:#f5b82e; --mist:#f4f8f7; }
+    * { scroll-behavior:smooth; }
+    body { font-family:"DM Sans",sans-serif; color:#173842; }
+    .display { font-family:"Fraunces",serif; }
+    .nav-link { position:relative; padding:.65rem .1rem; font-size:.88rem; font-weight:700; color:#183b44; }
+    .nav-link:after { content:""; position:absolute; bottom:0; left:0; width:0; height:2px; background:var(--teal); transition:.25s; }
+    .nav-link:hover:after,.nav-link:focus:after { width:100%; }
+    .dropdown-menu { visibility:hidden; opacity:0; transform:translateY(8px); transition:.2s; pointer-events:none; }
+    .group:hover .dropdown-menu,.group:focus-within .dropdown-menu { visibility:visible; opacity:1; transform:translateY(0); pointer-events:auto; }
+    .hero-slide { opacity:0; transition:opacity .8s ease; pointer-events:none; }
+    .hero-slide.active { opacity:1; pointer-events:auto; }
+    .hero-copy { opacity:0; transform:translateY(20px); transition:.6s .2s; }
+    .hero-slide.active .hero-copy { opacity:1; transform:translateY(0); }
+    .hero-shade { background:linear-gradient(90deg,rgba(3,27,37,.88),rgba(3,27,37,.55),rgba(3,27,37,.12)); }
+    .slide-dot.active { background:var(--gold); width:2rem; }
+    .gallery-item { transition:opacity .25s,transform .25s; }
+    .gallery-item.hidden-gallery { display:none; }
+    .reveal { animation:rise .65s both; }
+    @keyframes rise { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+    .ticker { animation:marquee 22s linear infinite; }
+    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    .focus-ring:focus-visible { outline:3px solid var(--gold); outline-offset:3px; }
+  </style>
+  <script src="/_sdk/ad00ce977a5c2ece.resizing_sdk.js" type="text/javascript" integrity="sha512-bog4wGkBPPOhR0ljLsI2R9w0aS7AHt6iC4MNxsBmTL7IysBG15pB3x/bOQf//NXwh2kdtoBZiW6QfBMagGYlWA=="></script>
+ </head>
+ <body data-template-id="__page-root" class="w-full overflow-x-hidden" style="background: rgb(255, 255, 255);">
+  <header>
+   <div data-template-id="top-bar" class="canva-banner bg-[#092d3e] text-white" style="background: rgb(9, 45, 62);">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-5 py-2 text-xs sm:px-8">
+     <div class="flex flex-wrap items-center gap-x-5 gap-y-1">
+      <span class="flex items-center gap-1.5"><i data-lucide="phone" class="h-3.5 w-3.5"></i> (0274) 000 123</span> <span class="flex items-center gap-1.5"><i data-lucide="mail" class="h-3.5 w-3.5"></i> info@smartalmuhsin.sch.id</span> <span class="hidden items-center gap-1.5 md:flex"><i data-lucide="clock-3" class="h-3.5 w-3.5"></i> Senin–Jumat, 07.00–16.00 WIB</span>
+     </div>
+     <div class="flex items-center gap-3">
+      <a class="focus-ring" href="spmb.html" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i data-lucide="facebook" class="h-4 w-4"></i></a> <a class="focus-ring" href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i data-lucide="instagram" class="h-4 w-4"></i></a> <a class="focus-ring" href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i data-lucide="youtube" class="h-4 w-4"></i></a> <a data-template-id="spmb-top-button" href="spmb.html" class="canva-button focus-ring rounded-md px-3 py-1.5 text-xs font-bold shadow-sm" style="background: rgb(245, 184, 46); color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 16px;">Portal SPMB</a>
+     </div>
+    </div>
+   </div>
+   <nav data-template-id="main-header" class="canva-header sticky top-0 z-40 border-b border-slate-100 bg-white/95 shadow-sm backdrop-blur" style="background: rgb(255, 255, 255);">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8">
+     <a href="#beranda" class="focus-ring flex items-center gap-3">
+      <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#087f72] text-xl font-bold text-white shadow-lg shadow-emerald-900/15">
+       S
+      </div>
+      <div>
+       <p data-template-id="school-name" class="canva-text text-base font-bold leading-tight" style="color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 16px;">SMK Smart Al-Muhsin</p>
+       <p data-template-id="school-tagline" class="canva-text mt-0.5 text-[10px] font-bold uppercase tracking-[.12em]" style="color: rgb(8, 127, 114); font-weight: 700; font-style: normal; font-size: 16px;">Cerdas · Berkarakter · Berteknologi</p>
+      </div></a>
+     <div class="hidden items-center gap-6 lg:flex">
+      <a class="nav-link focus-ring" href="#beranda">Beranda</a>
+      <div class="group relative">
+       <button class="nav-link focus-ring flex items-center gap-1" type="button">Profil <i data-lucide="chevron-down" class="h-3.5 w-3.5"></i></button>
+       <div class="dropdown-menu absolute left-0 top-full w-52 rounded-xl border border-slate-100 bg-white p-2 shadow-xl">
+        <a class="block rounded-lg px-3 py-2 text-sm hover:bg-emerald-50" href="#sambutan">Sejarah</a><a class="block rounded-lg px-3 py-2 text-sm hover:bg-emerald-50" href="#sambutan">Visi &amp; Misi</a><a class="block rounded-lg px-3 py-2 text-sm hover:bg-emerald-50" href="#sambutan">Struktur Organisasi</a><a class="block rounded-lg px-3 py-2 text-sm hover:bg-emerald-50" href="#sambutan">Guru &amp; Staf</a>
+       </div>
+      </div>
+      <div class="group relative">
+       <button class="nav-link focus-ring flex items-center gap-1" type="button">Program Keahlian <i data-lucide="chevron-down" class="h-3.5 w-3.5"></i></button>
+       <div class="dropdown-menu absolute left-0 top-full w-52 rounded-xl border border-slate-100 bg-white p-2 shadow-xl">
+        <a class="block rounded-lg px-3 py-2 text-sm hover:bg-emerald-50" href="#jurusan">TJKT</a></div>
+      </div>
+      <div class="group relative">
+       <button class="nav-link focus-ring flex items-center gap-1" type="button">Akademik <i data-lucide="chevron-down" class="h-3.5 w-3.5"></i></button>
+       <div class="dropdown-menu absolute left-0 top-full w-52 rounded-xl border border-slate-100 bg-white p-2 shadow-xl">
+        <a class="block rounded-lg px-3 py-2 text-sm hover:bg-emerald-50" href="#berita">Ekstrakurikuler</a><a class="block rounded-lg px-3 py-2 text-sm hover:bg-emerald-50" href="#berita">Prestasi</a><a class="block rounded-lg px-3 py-2 text-sm hover:bg-emerald-50" href="#berita">Kedisiplinan</a>
+       </div>
+      </div><a class="nav-link focus-ring" href="#mitra">Humas &amp; BKK</a> <a class="nav-link focus-ring" href="#berita">Berita &amp; Galeri</a> <a class="nav-link focus-ring" href="#kontak">Kontak</a>
+     </div><button id="mobile-toggle" type="button" class="focus-ring rounded-lg p-2 text-[#092d3e] lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Buka menu"><i data-lucide="menu"></i></button>
+    </div>
+    <div id="mobile-menu" class="hidden border-t border-slate-100 px-5 pb-4 lg:hidden">
+     <div class="grid gap-1 pt-3 text-sm font-bold"><a href="#beranda" class="rounded-lg p-2 hover:bg-emerald-50">Beranda</a><a href="#sambutan" class="rounded-lg p-2 hover:bg-emerald-50">Profil</a><a href="#jurusan" class="rounded-lg p-2 hover:bg-emerald-50">Program Keahlian</a><a href="#berita" class="rounded-lg p-2 hover:bg-emerald-50">Berita &amp; Galeri</a><a href="#kontak" class="rounded-lg p-2 hover:bg-emerald-50">Kontak</a>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <main>
+   <section id="beranda" class="relative h-[calc(78*min(var(--vh,1vh),1vh))] min-h-[570px] overflow-hidden">
+    <div class="hero-slide active absolute inset-0">
+     <img data-template-id="hero-image-1" loading="lazy" class="canva-image h-full w-full object-cover" src="foto1.jpg" alt="Students focused on learning in a modern computer lab setting.">
+     <div class="hero-shade absolute inset-0"></div>
+     <div class="hero-copy absolute inset-0 flex items-center">
+      <div class="mx-auto w-full max-w-7xl px-6 sm:px-8"><span data-template-id="hero-kicker" class="canva-tag inline-block rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[.16em]" style="background: rgb(245, 184, 46); color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 16px;">Penerimaan Peserta Didik Baru 2026</span>
+       <h1 data-template-id="hero-title" class="canva-text display mt-5 max-w-3xl text-4xl font-bold leading-[1.12] text-white md:text-6xl" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 32px;">Mewujudkan Generasi Unggul, Berakhlak Mulia, dan Siap Kerja</h1>
+       <p data-template-id="hero-subtitle" class="canva-text mt-5 max-w-xl text-base leading-relaxed text-slate-100 md:text-lg" style="color: rgb(241, 245, 249); font-weight: 400; font-style: normal; font-size: 18px;">Selamat Datang di Website Resmi SMK Smart Al-Muhsin</p>
+       <div class="mt-8 flex flex-wrap gap-3"><a data-template-id="hero-cta-primary" href="#spmb" class="canva-button focus-ring rounded-lg px-5 py-3 font-bold shadow-lg" style="background: rgb(245, 184, 46); color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 16px;">Daftar spmb Online</a><a data-template-id="hero-cta-secondary" href="#jurusan" class="canva-button focus-ring rounded-lg border px-5 py-3 font-bold" style="background: rgba(255, 255, 255, 0.12); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Jelajahi Jurusan</a>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="hero-slide absolute inset-0"><img data-template-id="hero-image-2" loading="lazy" class="canva-image h-full w-full object-cover" src="foto2.jpg" alt="Class session in progress at a school in Pandeglang, Banten, Indonesia.">
+     <div class="hero-shade absolute inset-0"></div>
+    </div>
+    <div class="hero-slide absolute inset-0"><img data-template-id="hero-image-3" loading="lazy" class="canva-image h-full w-full object-cover" src="foto3.jpg" alt="Young men learning PCB repair technique in electronic workshop.">
+     <div class="hero-shade absolute inset-0"></div>
+    </div>
+    <div class="absolute bottom-7 left-0 right-0 z-10 mx-auto flex max-w-7xl items-center justify-between px-6 sm:px-8">
+     <div class="flex gap-2"><button class="slide-dot active h-2 w-5 rounded-full bg-white/60" aria-label="Slide 1"></button><button class="slide-dot h-2 w-2 rounded-full bg-white/60" aria-label="Slide 2"></button><button class="slide-dot h-2 w-2 rounded-full bg-white/60" aria-label="Slide 3"></button>
+     </div>
+     <div class="flex gap-2"><button id="previous-slide" class="focus-ring rounded-full border border-white/60 p-2 text-white" aria-label="Slide sebelumnya"><i data-lucide="arrow-left" class="h-4 w-4"></i></button><button id="next-slide" class="focus-ring rounded-full border border-white/60 p-2 text-white" aria-label="Slide berikutnya"><i data-lucide="arrow-right" class="h-4 w-4"></i></button>
+     </div>
+    </div>
+   </section>
+   <section id="sambutan" class="mx-auto max-w-7xl px-6 py-20 sm:px-8">
+    <div class="grid items-center gap-12 lg:grid-cols-2">
+     <div class="relative">
+      <div class="absolute -left-4 -top-4 h-28 w-28 rounded-tl-[3rem] border-l-[10px] border-t-[10px] border-[#f5b82e]"></div><img data-template-id="kepsek.jpg" loading="lazy" class="canva-image relative h-[430px] w-full rounded-2xl object-cover shadow-2xl" src="kepsek.jpg" alt="A confident Indonesian teacher holding a book in his office, showcasing education and professionalism.">
+      <div data-template-id="principal-caption" class="canva-card absolute -bottom-6 left-6 rounded-xl p-4 shadow-xl" style="background: rgb(255, 255, 255);">
+       <p data-template-id="principal-name" class="canva-text font-bold" style="color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 16px;">SUHRO, S.Kom., Gr</p>
+       <p data-template-id="principal-role" class="canva-text mt-1 text-sm" style="color: rgb(8, 127, 114); font-weight: 400; font-style: normal; font-size: 16px;">Kepala SMK Smart Al-Muhsin</p>
+      </div>
+     </div>
+     <div>
+      <p data-template-id="welcome-label" class="canva-text text-sm font-bold uppercase tracking-[.18em]" style="color: rgb(8, 127, 114); font-weight: 700; font-style: normal; font-size: 16px;">Sambutan Kepala Sekolah</p>
+      <h2 data-template-id="welcome-title" class="canva-text display mt-3 text-4xl font-bold leading-tight" style="color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 24px;">Menyiapkan Talenta Masa Depan yang Berdaya Saing</h2>
+      <div class="mt-6 h-1 w-16 bg-[#f5b82e]"></div>
+      <p data-template-id="welcome-text" class="canva-text mt-6 leading-8" style="color: rgb(71, 97, 106); font-weight: 400; font-style: normal; font-size: 16px;">SMK Smart Al-Muhsin berkomitmen menghadirkan pendidikan yang memadukan nilai keislaman, penguasaan teknologi, dan pengalaman praktik nyata. Bersama mitra industri, kami menyiapkan setiap siswa untuk melangkah percaya diri menuju dunia kerja, studi lanjut, maupun wirausaha.</p><a data-template-id="welcome-button" href="#kontak" class="canva-button focus-ring mt-7 inline-flex rounded-lg px-5 py-3 font-bold" style="background: rgb(8, 127, 114); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Baca Selengkapnya</a>
+     </div>
+    </div>
+   </section>
+   <section data-template-id="stats-section" class="canva-section bg-[#092d3e] py-16" style="background: rgb(9, 45, 62);">
+    <div class="mx-auto max-w-7xl px-6 sm:px-8">
+     <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="text-center text-white"><i data-lucide="graduation-cap" class="mx-auto h-8 w-8 text-[#f5b82e]"></i>
+       <p data-template-id="stat-1-number" class="canva-text mt-3 text-3xl font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">500+</p>
+       <p data-template-id="stat-1-label" class="canva-text mt-1 text-sm text-slate-300" style="color: rgb(203, 213, 217); font-weight: 400; font-style: normal; font-size: 16px;">Siswa Aktif</p>
+      </div>
+      <div class="text-center text-white"><i data-lucide="briefcase-business" class="mx-auto h-8 w-8 text-[#f5b82e]"></i>
+       <p data-template-id="stat-2-number" class="canva-text mt-3 text-3xl font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">100%</p>
+       <p data-template-id="stat-2-label" class="canva-text mt-1 text-sm text-slate-300" style="color: rgb(203, 213, 217); font-weight: 400; font-style: normal; font-size: 16px;">Siap Kerja &amp; Wirausaha</p>
+      </div>
+      <div class="text-center text-white"><i data-lucide="handshake" class="mx-auto h-8 w-8 text-[#f5b82e]"></i>
+       <p data-template-id="stat-3-number" class="canva-text mt-3 text-3xl font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">35+</p>
+       <p data-template-id="stat-3-label" class="canva-text mt-1 text-sm text-slate-300" style="color: rgb(203, 213, 217); font-weight: 400; font-style: normal; font-size: 16px;">Mitra Industri IDUKA</p>
+      </div>
+      <div class="text-center text-white"><i data-lucide="cpu" class="mx-auto h-8 w-8 text-[#f5b82e]"></i>
+       <p data-template-id="stat-4-number" class="canva-text mt-3 text-3xl font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">3</p>
+       <p data-template-id="stat-4-label" class="canva-text mt-1 text-sm text-slate-300" style="color: rgb(203, 213, 217); font-weight: 400; font-style: normal; font-size: 16px;">Jurusan Unggulan</p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="jurusan" class="bg-[#f4f8f7] py-20">
+    <div class="mx-auto max-w-7xl px-6 sm:px-8">
+     <div class="max-w-2xl">
+      <p data-template-id="program-label" class="canva-text text-sm font-bold uppercase tracking-[.18em]" style="color: rgb(8, 127, 114); font-weight: 700; font-style: normal; font-size: 16px;">Program Keahlian</p>
+      <h2 data-template-id="program-title" class="canva-text display mt-3 text-4xl font-bold" style="color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 24px;">Belajar Hari Ini, Berkarya Esok Hari</h2>
+      <p data-template-id="program-description" class="canva-text mt-4 leading-7" style="color: rgb(71, 97, 106); font-weight: 400; font-style: normal; font-size: 16px;">Pilih jalur belajar yang relevan dengan potensi, minat, dan kebutuhan industri masa kini.</p>
+     </div>
+     <div class="mt-10 grid gap-6 md:grid-cols-3">
+      <article data-template-id="program-tkj-card" class="canva-card overflow-hidden rounded-2xl bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl" style="background: rgb(255, 255, 255);"><img data-template-id="program-tkj-image" loading="lazy" class="canva-image h-52 w-full object-cover" src="https://images.pexels.com/photos/18471532/pexels-photo-18471532.jpeg" alt="A contemporary office showcasing a server rack and computer workspace, ideal for tech and business settings.">
+       <div class="p-6"><span data-template-id="program-tkj-code" class="canva-tag rounded px-2 py-1 text-xs font-bold" style="background: rgb(216, 241, 237); color: rgb(8, 127, 114); font-weight: 700; font-style: normal; font-size: 16px;">TKJ</span>
+        <h3 data-template-id="program-tkj-title" class="canva-text mt-4 text-xl font-bold" style="color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 19px;">Teknik Komputer &amp; Jaringan</h3>
+        <p data-template-id="program-tkj-description" class="canva-text mt-3 text-sm leading-6" style="color: rgb(71, 97, 106); font-weight: 400; font-style: normal; font-size: 16px;">Menguasai jaringan, server, perangkat keras, dan fondasi infrastruktur teknologi modern.</p><a data-template-id="program-detail-button" href="#kontak" class="canva-link focus-ring mt-5 inline-flex items-center gap-2 text-sm font-bold" style="color: rgb(8, 127, 114); font-weight: 700;"><span data-template-id="program-detail-label" class="canva-text" style="font-weight: 400; font-style: normal; font-size: 16px;">Detail Jurusan</span><i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section id="berita" class="mx-auto max-w-7xl px-6 py-20 sm:px-8">
+    <div class="grid gap-12 lg:grid-cols-[1.55fr_.8fr]">
+     <div>
+      <p data-template-id="news-label" class="canva-text text-sm font-bold uppercase tracking-[.18em]" style="color: rgb(8, 127, 114); font-weight: 700; font-style: normal; font-size: 16px;">Kabar Smart</p>
+      <h2 data-template-id="news-title" class="canva-text display mt-3 text-4xl font-bold" style="color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 24px;">Berita Terbaru</h2>
+      <div class="mt-8 grid gap-5 md:grid-cols-3">
+       <article class="overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm"><img data-template-id="news-image-1" loading="lazy" class="canva-image h-36 w-full object-cover" src="https://images.pexels.com/photos/35161342/pexels-photo-35161342.jpeg" alt="High school students participate in a national flag-raising ceremony outdoors at school.">
+        <div class="p-4">
+         <p data-template-id="news-date-1" class="canva-text text-xs font-bold" style="color: rgb(8, 127, 114); font-weight: 700; font-style: normal; font-size: 16px;">12 Agustus 2026</p>
+         <h3 data-template-id="news-title-1" class="canva-text mt-2 font-bold leading-snug" style="color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 19px;">Semangat Kemerdekaan dalam Upacara Sekolah</h3>
+         <p data-template-id="news-summary-1" class="canva-text mt-2 text-sm leading-5" style="color: rgb(71, 97, 106); font-weight: 400; font-style: normal; font-size: 16px;">Siswa menampilkan kedisiplinan dan nasionalisme dalam upacara bersama.</p>
+        </div>
+       </article>
+       <article class="overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm"><img data-template-id="news-image-2" loading="lazy" class="canva-image h-36 w-full object-cover" src="https://images.pexels.com/photos/9242810/pexels-photo-9242810.jpeg" alt="Two young adults working on an electronics project in a lab setting, focusing on circuit design.">
+        <div class="p-4">
+         <p data-template-id="news-date-2" class="canva-text text-xs font-bold" style="color: rgb(8, 127, 114); font-weight: 700; font-style: normal; font-size: 16px;">05 Agustus 2026</p>
+         <h3 data-template-id="news-title-2" class="canva-text mt-2 font-bold leading-snug" style="color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 19px;">Praktik Industri: Dari Kelas ke Dunia Nyata</h3>
+         <p data-template-id="news-summary-2" class="canva-text mt-2 text-sm leading-5" style="color: rgb(71, 97, 106); font-weight: 400; font-style: normal; font-size: 16px;">Pembelajaran proyek menumbuhkan ketelitian dan kerja sama tim siswa.</p>
+        </div>
+       </article>
+       <article class="overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm"><img data-template-id="news-image-3" loading="lazy" class="canva-image h-36 w-full object-cover" src="https://images.pexels.com/photos/6623388/pexels-photo-6623388.jpeg" alt="Asian students receiving certificates at a graduation ceremony, celebrating academic achievements.">
+        <div class="p-4">
+         <p data-template-id="news-date-3" class="canva-text text-xs font-bold" style="color: rgb(8, 127, 114); font-weight: 700; font-style: normal; font-size: 16px;">28 Juli 2026</p>
+         <h3 data-template-id="news-title-3" class="canva-text mt-2 font-bold leading-snug" style="color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 19px;">Prestasi Siswa Mengharumkan Nama Sekolah</h3>
+         <p data-template-id="news-summary-3" class="canva-text mt-2 text-sm leading-5" style="color: rgb(71, 97, 106); font-weight: 400; font-style: normal; font-size: 16px;">Apresiasi untuk siswa berprestasi dalam kompetisi keterampilan tingkat daerah.</p>
+        </div>
+       </article>
+      </div>
+     </div>
+     <aside data-template-id="agenda-panel" class="canva-panel rounded-2xl p-7" style="background: rgb(231, 244, 241);">
+      <p data-template-id="agenda-label" class="canva-text text-sm font-bold uppercase tracking-[.15em]" style="color: rgb(8, 127, 114); font-weight: 700; font-style: normal; font-size: 16px;">Informasi Penting</p>
+      <h2 data-template-id="agenda-title" class="canva-text display mt-2 text-3xl font-bold" style="color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 24px;">Pengumuman &amp; Agenda</h2>
+      <div class="mt-6 space-y-5 border-l-2 border-[#f5b82e] pl-5">
+       <div>
+        <p data-template-id="agenda-date-1" class="canva-text text-sm font-bold" style="color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 16px;">01 Sep – 30 Nov 2026</p>
+        <p data-template-id="agenda-item-1" class="canva-text mt-1 text-sm" style="color: rgb(71, 97, 106); font-weight: 400; font-style: normal; font-size: 16px;">Pendaftaran spmb Gelombang I</p>
+       </div>
+       <div>
+        <p data-template-id="agenda-date-2" class="canva-text text-sm font-bold" style="color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 16px;">14 September 2026</p>
+        <p data-template-id="agenda-item-2" class="canva-text mt-1 text-sm" style="color: rgb(71, 97, 106); font-weight: 400; font-style: normal; font-size: 16px;">Penilaian Tengah Semester</p>
+       </div>
+       <div>
+        <p data-template-id="agenda-date-3" class="canva-text text-sm font-bold" style="color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 16px;">25 Desember 2026</p>
+        <p data-template-id="agenda-item-3" class="canva-text mt-1 text-sm" style="color: rgb(71, 97, 106); font-weight: 400; font-style: normal; font-size: 16px;">Libur Semester Ganjil</p>
+       </div>
+      </div><a data-template-id="agenda-button" href="#spmb" class="canva-button focus-ring mt-7 inline-block rounded-lg px-4 py-3 text-sm font-bold" style="background: rgb(8, 127, 114); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Lihat Informasi spmb</a>
+     </aside>
+    </div>
+   </section>
+   <section class="bg-[#f4f8f7] py-20">
+    <div class="mx-auto max-w-7xl px-6 sm:px-8">
+     <div class="flex flex-wrap items-end justify-between gap-5">
+      <div>
+       <p data-template-id="gallery-label" class="canva-text text-sm font-bold uppercase tracking-[.18em]" style="color: rgb(8, 127, 114); font-weight: 700; font-style: normal; font-size: 16px;">Ruang untuk Bertumbuh</p>
+       <h2 data-template-id="gallery-title" class="canva-text display mt-3 text-4xl font-bold" style="color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 24px;">Fasilitas &amp; Galeri Kegiatan</h2>
+      </div>
+      <div class="flex flex-wrap gap-2"><button class="gallery-filter focus-ring rounded-full bg-[#087f72] px-4 py-2 text-sm font-bold text-white" data-filter="all">Semua</button><button class="gallery-filter focus-ring rounded-full border border-slate-300 px-4 py-2 text-sm font-bold" data-filter="lab">Lab Komputer</button><button class="gallery-filter focus-ring rounded-full border border-slate-300 px-4 py-2 text-sm font-bold" data-filter="workshop">Ruang Praktik</button><button class="gallery-filter focus-ring rounded-full border border-slate-300 px-4 py-2 text-sm font-bold" data-filter="facility">Fasilitas</button>
+      </div>
+     </div>
+     <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="gallery-item" data-category="lab"><img data-template-id="gallery-image-lab" loading="lazy" class="canva-image h-60 w-full rounded-xl object-cover" src="https://images.pexels.com/photos/18471523/pexels-photo-18471523.jpeg" alt="A contemporary classroom equipped with advanced technological tools and workstations.">
+      </div>
+      <div class="gallery-item" data-category="workshop"><img data-template-id="gallery-image-workshop" loading="lazy" class="canva-image h-60 w-full rounded-xl object-cover" src="https://images.pexels.com/photos/9242273/pexels-photo-9242273.jpeg" alt="Two technicians focused on electronics repair work in a modern workshop setting.">
+      </div>
+      <div class="gallery-item" data-category="facility"><img data-template-id="gallery-image-mosque" loading="lazy" class="canva-image h-60 w-full rounded-xl object-cover" src="https://images.pexels.com/photos/39341882/pexels-photo-39341882.jpeg" alt="Beautiful mosque courtyard with domes and arches in Central Java.">
+      </div>
+      <div class="gallery-item" data-category="facility"><img data-template-id="gallery-image-field" loading="lazy" class="canva-image h-60 w-full rounded-xl object-cover" src="https://images.pexels.com/photos/2968077/pexels-photo-2968077.jpeg" alt="Aerial view of students playing basketball on an outdoor court in Jawa Tengah, Indonesia.">
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="mitra" data-template-id="partner-section" class="canva-section overflow-hidden bg-white py-16" style="background: rgb(255, 255, 255);">
+    <div class="mx-auto max-w-7xl px-6 text-center sm:px-8">
+     <p data-template-id="partner-label" class="canva-text text-sm font-bold uppercase tracking-[.18em]" style="color: rgb(8, 127, 114); font-weight: 700; font-style: normal; font-size: 16px;">Jaringan Kolaborasi</p>
+     <h2 data-template-id="partner-title" class="canva-text display mt-3 text-3xl font-bold" style="color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 24px;">Bertumbuh Bersama Mitra Industri</h2>
+     <div class="mt-10 overflow-hidden">
+      <div class="ticker flex w-max items-center gap-12 text-lg font-bold text-slate-400"><span>TECHNOVA</span><span>DIGITALKARYA</span><span>INDO NETWORK</span><span>CREATIVE LAB</span><span>NUSANTARA TECH</span><span>TECHNOVA</span><span>DIGITALKARYA</span><span>INDO NETWORK</span><span>CREATIVE LAB</span><span>NUSANTARA TECH</span>
+      </div>
+     </div>
+     <blockquote data-template-id="testimonial-card" class="canva-card mx-auto mt-12 max-w-3xl rounded-2xl p-8" style="background: rgb(244, 248, 247);"><i data-lucide="quote" class="mx-auto h-8 w-8 text-[#f5b82e]"></i>
+      <p data-template-id="testimonial-text" class="canva-text display mt-4 text-xl font-semibold leading-relaxed" style="color: rgb(9, 45, 62); font-weight: 600; font-style: normal; font-size: 16px;">“Pembelajaran berbasis proyek dan pengalaman PKL membuat saya percaya diri. Tidak lama setelah lulus, saya langsung mendapat kesempatan bekerja di industri digital.”</p>
+      <footer data-template-id="testimonial-author" class="canva-text mt-5 text-sm font-bold" style="color: rgb(8, 127, 114); font-weight: 700; font-style: normal; font-size: 16px;">— Rizky Pratama, Alumni RPL 2024</footer>
+     </blockquote>
+    </div>
+   </section>
+  </main>
+  <footer id="kontak" data-template-id="footer-section" class="canva-footer bg-[#092d3e] text-white" style="background: rgb(9, 45, 62);">
+   <div class="mx-auto grid max-w-7xl gap-10 px-6 py-16 sm:px-8 md:grid-cols-2 lg:grid-cols-4">
+    <div>
+     <p data-template-id="footer-school-name" class="canva-text text-xl font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">SMK Smart Al-Muhsin</p>
+     <p data-template-id="footer-description" class="canva-text mt-4 text-sm leading-7 text-slate-300" style="color: rgb(203, 213, 217); font-weight: 400; font-style: normal; font-size: 16px;">Sekolah vokasi yang membentuk generasi berakhlak, cakap teknologi, dan siap memberi dampak bagi masyarakat.</p>
+     <p data-template-id="footer-address" class="canva-text mt-4 text-sm leading-6 text-slate-300" style="color: rgb(203, 213, 217); font-weight: 400; font-style: normal; font-size: 16px;">Jl. Pendidikan No. 88, Sleman, Daerah Istimewa Yogyakarta, Indonesia</p><a data-template-id="map-link" href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="canva-link focus-ring mt-4 inline-flex items-center gap-2 text-sm font-bold" style="color: rgb(245, 184, 46); font-weight: 700;"><i data-lucide="map-pin" class="h-4 w-4"></i><span data-template-id="map-link-label" class="canva-text" style="font-weight: 400; font-style: normal; font-size: 16px;">Lihat lokasi di peta</span></a>
+    </div>
+    <div>
+     <h2 data-template-id="quick-links-title" class="canva-text font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Tautan Cepat</h2>
+     <ul class="mt-5 space-y-3 text-sm text-slate-300">
+      <li><a href="file:///C:/xampp/htdocs/spmb/profilsekolah.html">Profil Sekolah</a></li>
+      <li><a href="file:///C:/xampp/htdocs/spmb/bkk.html">BKK & Career Center</a></li>
+      <li><a href="#berita">Informasi Kelulusan</a></li>
+      <li><a href="lms.html">e-Learning / LMS</a></li>
+      <li><a href="file:///C:/xampp/htdocs/spmb/perpustakaan.html">Perpustakaan Digital</a></li>
+     </ul>
+    </div>
+    <div>
+     <h2 data-template-id="footer-program-title" class="canva-text font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Program Keahlian</h2>
+     <ul class="mt-5 space-y-3 text-sm text-slate-300">
+      <li>Teknik Jaringan Komputer &amp; Telekomunikasi</li>
+     </ul>
+    </div>
+    <div id="spmb">
+     <h2 data-template-id="newsletter-title" class="canva-text font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Hubungi Kami</h2>
+     <p data-template-id="newsletter-text" class="canva-text mt-4 text-sm leading-6 text-slate-300" style="color: rgb(203, 213, 217); font-weight: 400; font-style: normal; font-size: 16px;">Dapatkan informasi spmb, agenda sekolah, dan kabar terbaru langsung melalui email Anda.</p>
+     <form id="newsletter-form" class="mt-5"><label data-template-id="newsletter-label" class="canva-text sr-only" for="newsletter-email" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Alamat email</label>
+      <div class="flex gap-2"><input id="newsletter-email" type="email" required="" class="w-full rounded-lg border border-white/20 bg-white/10 px-3 py-3 text-sm text-white placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-[#f5b82e]"><button data-template-id="newsletter-button" type="submit" class="canva-button focus-ring rounded-lg px-4 text-sm font-bold" style="background: rgb(245, 184, 46); color: rgb(9, 45, 62); font-weight: 700; font-style: normal; font-size: 16px;">Daftar</button>
+      </div>
+      <p id="newsletter-status" class="mt-3 text-sm" aria-live="polite"></p>
+     </form>
+    </div>
+   </div>
+   <div data-template-id="copyright-bar" class="canva-banner border-t border-white/10 px-6 py-5 text-center" style="background: rgb(6, 35, 48);">
+    <p data-template-id="copyright-text" class="canva-text text-xs text-slate-400" style="color: rgb(148, 174, 181); font-weight: 400; font-style: normal; font-size: 16px;">© 2026 SMK Smart Al-Muhsin. All Rights Reserved. Designed for Educational Excellence.</p>
+   </div>
+  </footer>
+  <script src="/_sdk/8b7c4717bafbcf62.editing_sdk.js" integrity="sha512-/t3Rjm/TVHx0TUFevsNeqgNF0PQm8F5l+hyiCjrHCLbsauhvNMY9XpbPM3BPm27R9/KnzXCuMA6HMwrgyWM8WQ=="></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+      const menu = document.getElementById("mobile-menu"), toggle = document.getElementById("mobile-toggle");
+      toggle.addEventListener("click", () => { const open = menu.classList.toggle("hidden") === false; toggle.setAttribute("aria-expanded", String(open)); });
+      document.querySelectorAll("#mobile-menu a").forEach(a => a.addEventListener("click", () => { menu.classList.add("hidden"); toggle.setAttribute("aria-expanded","false"); }));
+
+      const slides = [...document.querySelectorAll(".hero-slide")], dots = [...document.querySelectorAll(".slide-dot")]; let current = 0, timer;
+      function showSlide(index) { current=(index+slides.length)%slides.length; slides.forEach((s,i)=>s.classList.toggle("active",i===current)); dots.forEach((d,i)=>d.classList.toggle("active",i===current)); }
+      function restart(){ clearInterval(timer); timer=setInterval(()=>showSlide(current+1),5500); }
+      document.getElementById("previous-slide").addEventListener("click",()=>{showSlide(current-1);restart()});
+      document.getElementById("next-slide").addEventListener("click",()=>{showSlide(current+1);restart()});
+      dots.forEach((d,i)=>d.addEventListener("click",()=>{showSlide(i);restart()})); restart();
+
+      document.querySelectorAll(".gallery-filter").forEach(button => button.addEventListener("click", () => {
+        const selected=button.dataset.filter;
+        document.querySelectorAll(".gallery-filter").forEach(b=>{b.classList.remove("bg-[#087f72]","text-white");b.classList.add("border","border-slate-300");});
+        button.classList.add("bg-[#087f72]","text-white"); button.classList.remove("border","border-slate-300");
+        document.querySelectorAll(".gallery-item").forEach(item=>item.classList.toggle("hidden-gallery",selected!=="all"&&item.dataset.category!==selected));
+      }));
+
+      const status=document.getElementById("newsletter-status"), form=document.getElementById("newsletter-form"), submit=form.querySelector("button");
+      const handler={onDataChanged(){}};
+      async function initData(){ const result=await window.dataSdk.init(handler); if(!result.isOk) status.textContent="Layanan buletin sedang tidak tersedia. Silakan coba lagi nanti."; }
+      initData();
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault(); if(!form.reportValidity()) return;
+        submit.disabled=true; submit.classList.add("opacity-60"); status.textContent="Mendaftarkan email...";
+        const result=await window.dataSdk.create({email:document.getElementById("newsletter-email").value.trim(),created_at:new Date().toISOString()});
+        if(result.isOk){ status.textContent="Terima kasih! Email Anda telah terdaftar."; form.reset(); } else { status.textContent="Pendaftaran belum berhasil. Silakan coba kembali."; }
+        submit.disabled=false; submit.classList.remove("opacity-60");
+      });
+    });
+  </script>
+ 
+</body></html>
