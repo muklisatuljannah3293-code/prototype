@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan Digital - SMK SMART AL MUHSIN</title>
+    <style>
+        /* Reset & Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigasi */
+        header {
+            background-color: #007bc7;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-box h1 {
+            font-size: 1.3rem;
+        }
+
+        .logo-box span {
+            font-size: 0.8rem;
+            color: #d1e8ff;
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d1e8ff;
+        }
+
+        /* Hero & Search Bar */
+        .hero {
+            background: linear-gradient(rgba(0, 123, 199, 0.85), rgba(15, 23, 42, 0.85)), url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-box button {
+            padding: 12px 25px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background-color: #218838;
+        }
+
+        /* Container Layout */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #007bc7;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #007bc7;
+            margin: 8px auto 0;
+        }
+
+        /* Kategori Buku */
+        .kategori-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .kategori-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid #007bc7;
+            transition: transform 0.3s;
+        }
+
+        .kategori-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .kategori-card h3 {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        /* Catalog Grid (Buku Digital) */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .book-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .book-cover {
+            width: 100%;
+            height: 250px;
+            background-color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-weight: bold;
+        }
+
+        .book-info {
+            padding: 15px;
+        }
+
+        .book-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 5px;
+        }
+
+        .book-author {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .badge-status {
+            display: inline-block;
+            padding: 3px 8px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+            background-color: #e0f2fe;
+            color: #0369a1;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .btn-read {
+            display: block;
+            text-align: center;
+            background: #007bc7;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .btn-read:hover {
+            background: #005a93;
+        }
+
+        /* Form Pinjam / Pendaftaran Anggota */
+        .form-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn-submit {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .btn-submit:hover {
+            background: #218838;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            color: #94a3b8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .search-box {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo-box">
+            <h1>PERPUSTAKAAN DIGITAL</h1>
+            <span>SMK SMART AL MUHSIN BANTUL</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#kategori">Kategori</a></li>
+                <li><a href="#koleksi">Koleksi Digital</a></li>
+                <li><a href="#peminjaman">Layanan Bebas Pustaka</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero / Pencarian -->
+    <section class="hero" id="beranda">
+        <h2>Perpustakaan Digital SMK SMART AL MUHSIN</h2>
+        <p>Akses ratusan buku pelajaran, modul kejuruan, dan bacaan umum secara online kapan saja.</p>
+        
+        <form class="search-box" action="#" method="GET">
+            <input type="text" placeholder="Cari judul buku, penulis, atau topik keahlian...">
+            <button type="submit">Cari Buku</button>
+        </form>
+    </section>
+
+    <div class="container">
+
+        <!-- Kategori Koleksi -->
+        <section id="kategori">
+            <h2 class="section-title">Kategori Buku</h2>
+            <div class="kategori-grid">
+                <div class="kategori-card">
+                    <h3>Teknologi & Informasi</h3>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">TKJ, RPL, DKV & Pemrograman</p>
+                </div>
+                <div class="kategori-card">
+                    <h3>Pelajaran Umum</h3>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">Matematika, Bahasa, IPA, IPS</p>
+                </div>
+                <div class="kategori-card">
+                    <h3>Keislaman & Pesantren</h3>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">Fiqih, Akhlak, Al-Qur'an Hadits</p>
+                </div>
+                <div class="kategori-card">
+                    <h3>Kewirausahaan</h3>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">Bisnis Digital, Produk Kreatif</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Koleksi Buku Populer -->
+        <section id="koleksi">
+            <h2 class="section-title">Koleksi Digital Terbaru</h2>
+            
+            <div class="book-grid">
+                <!-- Buku 1 -->
+                <div class="book-card">
+                    <div class="book-cover">Cover Buku HTML & CSS</div>
+                    <div class="book-info">
+                        <span class="badge-status">E-Book (PDF)</span>
+                        <h3 class="book-title">Pemrograman Web Dasar HTML & CSS</h3>
+                        <p class="book-author">Penulis: Tim Multimedia</p>
+                        <a href="#" class="btn-read">Baca Online / Download</a>
+                    </div>
+                </div>
+
+                <!-- Buku 2 -->
+                <div class="book-card">
+                    <div class="book-cover">Cover Jaringan Komputer</div>
+                    <div class="book-info">
+                        <span class="badge-status">E-Book (PDF)</span>
+                        <h3 class="book-title">Konfigurasi Jaringan Mikrotik SMK</h3>
+                        <p class="book-author">Penulis: Admin Jaringan</p>
+                        <a href="#" class="btn-read">Baca Online / Download</a>
+                    </div>
+                </div>
+
+                <!-- Buku 3 -->
+                <div class="book-card">
+                    <div class="book-cover">Cover Pendidikan Agama</div>
+                    <div class="book-info">
+                        <span class="badge-status">E-Book (PDF)</span>
+                        <h3 class="book-title">Panduan Akhlak Santri & Siswa</h3>
+                        <p class="book-author">Penulis: Tim Keagamaan</p>
+                        <a href="#" class="btn-read">Baca Online / Download</a>
+                    </div>
+                </div>
+
+                <!-- Buku 4 -->
+                <div class="book-card">
+                    <div class="book-cover">Cover Produk Kreatif</div>
+                    <div class="book-info">
+                        <span class="badge-status">E-Book (PDF)</span>
+                        <h3 class="book-title">Dasar Kewirausahaan Digital SMK</h3>
+                        <p class="book-author">Penulis: Tim PKK</p>
+                        <a href="#" class="btn-read">Baca Online / Download</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Pemesanan / Pendaftaran Bebas Pustaka -->
+        <section id="peminjaman">
+            <h2 class="section-title">Pengajuan Pinjam / Keanggotaan Digital</h2>
+            <div class="form-section">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="nisn">NISN / NIP</label>
+                        <input type="text" id="nisn" name="nisn" placeholder="Masukkan NISN siswa atau NIP guru" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kelas">Kelas / Jabatan</label>
+                        <select id="kelas" name="kelas" required>
+                            <option value="">-- Pilih Kelas --</option>
+                            <option value="X TKJ">X TKJ</option>
+                            <option value="XI TKJ">XI TKJ</option>
+                            <option value="XII TKJ">XII TKJ</option>
+                            <option value="Guru/Karyawan">Guru / Karyawan</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="judul">Judul Buku yang Ingin Dipinjam (Fisik / Digital)</label>
+                        <input type="text" id="judul" name="judul" placeholder="Contoh: Pemrograman Web Dasar" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Kirim Form Pengajuan</button>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Perpustakaan Digital SMK SMART AL MUHSIN</p>
+    </footer>
+
+</body>
+</html>

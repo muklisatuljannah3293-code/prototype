@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning - SMK SMART AL MUHSIN</title>
+    <style>
+        /* Reset & Standar Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        /* Navbar Utama */
+        header {
+            background-color: #007bc7;
+            color: #ffffff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .brand h1 {
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+        }
+
+        .brand span {
+            font-size: 0.8rem;
+            color: #d1e8ff;
+            display: block;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background-color: #ffffff;
+            color: #007bc7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .user-info {
+            text-align: right;
+            font-size: 0.85rem;
+        }
+
+        .user-info strong {
+            display: block;
+            color: #ffffff;
+        }
+
+        /* Navigasi Menu */
+        nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 0.5rem 5%;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            overflow-x: auto;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 500;
+            padding: 8px 12px;
+            display: inline-block;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #e0f2fe;
+            color: #007bc7;
+            font-weight: 600;
+        }
+
+        /* Container & Layout Dashboard */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        /* Section Cards */
+        .card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            color: #007bc7;
+            margin-bottom: 20px;
+            border-left: 4px solid #007bc7;
+            padding-left: 10px;
+        }
+
+        /* Grid Kelas / Mata Pelajaran */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .course-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 15px;
+            background: #fafafa;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            background: #ffffff;
+        }
+
+        .course-tag {
+            font-size: 0.75rem;
+            background-color: #007bc7;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .course-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+
+        .course-teacher {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+
+        .btn-course {
+            display: block;
+            text-align: center;
+            background-color: #f1f5f9;
+            color: #007bc7;
+            text-decoration: none;
+            padding: 8px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-course:hover {
+            background-color: #007bc7;
+            color: white;
+        }
+
+        /* Daftar Tugas & Pengumuman */
+        .task-list, .announcement-list {
+            list-style: none;
+        }
+
+        .task-item, .announcement-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .task-item:last-child, .announcement-item:last-child {
+            border-bottom: none;
+        }
+
+        .task-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #1e293b;
+        }
+
+        .task-meta {
+            font-size: 0.8rem;
+            color: #ef4444;
+            margin-top: 3px;
+        }
+
+        .badge-status {
+            font-size: 0.75rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: #fef3c7;
+            color: #d97706;
+            float: right;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            margin-top: 50px;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 850px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .user-info {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="brand">
+            <h1>E-LEARNING SMART</h1>
+            <span>SMK SMART AL MUHSIN BANTUL</span>
+        </div>
+        <div class="user-profile">
+            <div class="user-info">
+                <strong>Ahmad Fauzi</strong>
+                <span>NISN: 0051234567 | XII TKJ</span>
+            </div>
+            <div class="user-avatar">AF</div>
+        </div>
+    </header>
+
+    <!-- Sub-Navigasi Menu -->
+    <nav>
+        <ul>
+            <li><a href="#" class="active">Beranda</a></li>
+            <li><a href="#">Mata Pelajaran Saya</a></li>
+            <li><a href="#">Jadwal & Presensi</a></li>
+            <li><a href="#">Tugas & Ujian</a></li>
+            <li><a href="#">Nilai & Rapor</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Utama -->
+    <div class="container">
+        
+        <!-- Kolom Kiri: Kelas & Pembelajaran -->
+        <main>
+            <!-- Kelas Saya -->
+            <section class="card">
+                <h2 class="section-title">Mata Pelajaran Aktif</h2>
+                <div class="course-grid">
+                    
+                    <!-- Course Card 1 -->
+                    <div class="course-card">
+                        <span class="course-tag">Produktif TKJ</span>
+                        <div class="course-title">Administrasi Infrastruktur Jaringan</div>
+                        <div class="course-teacher">Pengampu: Guru Produktif</div>
+                        <a href="#" class="btn-course">Buka Kelas</a>
+                    </div>
+
+                    <!-- Course Card 2 -->
+                    <div class="course-card">
+                        <span class="course-tag">Produktif RPL</span>
+                        <div class="course-title">Pemrograman Web & Perangkat Bergerak</div>
+                        <div class="course-teacher">Pengampu: Guru Pemrograman</div>
+                        <a href="#" class="btn-course">Buka Kelas</a>
+                    </div>
+
+                    <!-- Course Card 3 -->
+                    <div class="course-card">
+                        <span class="course-tag">Keagamaan</span>
+                        <div class="course-title">Fiqih & Akhlak Santri</div>
+                        <div class="course-teacher">Pengampu: Tim Keagamaan</div>
+                        <a href="#" class="btn-course">Buka Kelas</a>
+                    </div>
+
+                    <!-- Course Card 4 -->
+                    <div class="course-card">
+                        <span class="course-tag">Umum</span>
+                        <div class="course-title">Bahasa Inggris Maritim / Teknik</div>
+                        <div class="course-teacher">Pengampu: Guru Bahasa Inggris</div>
+                        <a href="#" class="btn-course">Buka Kelas</a>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Pengumuman E-Learning -->
+            <section class="card">
+                <h2 class="section-title">Pengumuman Terbaru</h2>
+                <ul class="announcement-list">
+                    <li class="announcement-item">
+                        <strong style="color: #007bc7;">Jadwal Penilaian Tengah Semester (PTS) Digital</strong>
+                        <p style="font-size: 0.85rem; color: #475569; margin-top: 4px;">Ujian CBT E-Learning akan dilaksanakan serentak mulai minggu depan. Pastikan akun presensi dan tugas-tugas sudah terselesaikan.</p>
+                        <span style="font-size: 0.75rem; color: #94a3b8;">Diposting: 11 September 2026</span>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- Kolom Kanan: Sidebar Tugas & Informasi -->
+        <aside>
+            <!-- Card Tugas Mendatang -->
+            <div class="card">
+                <h2 class="section-title">Tugas Perlu Dikerjakan</h2>
+                <ul class="task-list">
+                    <li class="task-item">
+                        <span class="badge-status">Belum Kirim</span>
+                        <div class="task-title">Konfigurasi Routing Mikrotik</div>
+                        <div class="task-meta">Batas: Hari Ini, 23:59 WIB</div>
+                    </li>
+                    <li class="task-item">
+                        <span class="badge-status">Belum Kirim</span>
+                        <div class="task-title">Membuat Tampilan HTML E-Learning</div>
+                        <div class="task-meta">Batas: Besok, 15:00 WIB</div>
+                    </li>
+                    <li class="task-item">
+                        <span class="badge-status" style="background:#dcfce7; color:#15803d;">Selesai</span>
+                        <div class="task-title">Rangkuman Fiqih Muamalah</div>
+                        <div class="task-meta" style="color:#64748b;">Sudah dinilai: 90/100</div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Informasi Kontak Bantuan -->
+            <div class="card" style="background-color: #f0f7ff;">
+                <h2 class="section-title" style="border-left-color: #0284c7;">Bantuan E-Learning</h2>
+                <p style="font-size: 0.85rem; color: #334155;">Jika mengalami kendala login akun, error sistem, atau lupa kata sandi, silakan hubungi tim Admin IT Sekolah.</p>
+                <a href="#" style="display:inline-block; margin-top:10px; font-size:0.85rem; color:#007bc7; font-weight:bold; text-decoration:none;">Hubungi Helpdesk WA &rarr;</a>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 E-Learning SMK SMART AL MUHSIN</p>
+        <p>Yayasan Pesantren Aji Mahasiswa Al-Muhsin Bantul, D.I. Yogyakarta</p>
+    </footer>
+
+</body>
+</html>

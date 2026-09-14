@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BKK Career Center - SMK SMART AL MUHSIN</title>
+    <style>
+        /* Reset & Base Style */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header / Navbar */
+        header {
+            background-color: #007bc7;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-container h1 {
+            font-size: 1.2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d1e8ff;
+        }
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(rgba(0, 123, 199, 0.8), rgba(0, 123, 199, 0.8)), url('https://via.placeholder.com/1200x400') center/cover;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #007bc7;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Layout Main Content */
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007bc7;
+        }
+
+        /* Job Cards Grid */
+        .job-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .job-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 5px solid #007bc7;
+            transition: transform 0.2s;
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            color: #222;
+            margin-bottom: 5px;
+        }
+
+        .company-name {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .job-detail {
+            font-size: 0.85rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .btn-apply {
+            display: inline-block;
+            background: #007bc7;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .btn-apply:hover {
+            background: #005a93;
+        }
+
+        /* Form Pendaftaran Alumni */
+        .form-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn-submit {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            background: #218838;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Navbar */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo-container">
+            <h1>BKK SMK SMART AL MUHSIN</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#lowongan">Lowongan Kerja</a></li>
+                <li><a href="#pendataan">Pendataan Alumni</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h2>Bursa Kerja Khusus (BKK) Career Center</h2>
+        <p>Jembatan Masuk Dunia Kerja & Industri bagi Siswa dan Alumni SMK SMART AL MUHSIN Bantul.</p>
+        <a href="#lowongan" class="btn">Cari Lowongan Kerja</a>
+    </section>
+
+    <div class="container">
+        
+        <!-- Section Lowongan Kerja -->
+        <section id="lowongan">
+            <h2 class="section-title">Lowongan Kerja Terbaru</h2>
+            
+            <div class="job-grid">
+                <!-- Card Lowongan 1 -->
+                <div class="job-card">
+                    <h3 class="job-title">Teknisi Jaringan & Komputer</h3>
+                    <p class="company-name">PT. Solusi Data Nusantara</p>
+                    <p class="job-detail">
+                        <strong>Kualifikasi:</strong> Lulusan TKJ/RPL, Menguasai Mikrotik & Troubleshooting PC.<br>
+                        <strong>Lokasi:</strong> Yogyakarta<br>
+                        <strong>Batas Akhir:</strong> 30 Oktober 2026
+                    </p>
+                    <a href="#" class="btn-apply">Lamar Sekarang</a>
+                </div>
+
+                <!-- Card Lowongan 2 -->
+                <div class="job-card">
+                    <h3 class="job-title">Junior Web Developer</h3>
+                    <p class="company-name">CV. Media Inovasi Digital</p>
+                    <p class="job-detail">
+                        <strong>Kualifikasi:</strong> Lulusan RPL/Multimedia, Menguasai HTML, CSS, & PHP Basic.<br>
+                        <strong>Lokasi:</strong> Bantul, DIY<br>
+                        <strong>Batas Akhir:</strong> 15 November 2026
+                    </p>
+                    <a href="#" class="btn-apply">Lamar Sekarang</a>
+                </div>
+
+                <!-- Card Lowongan 3 -->
+                <div class="job-card">
+                    <h3 class="job-title">Staff Administrasi Toko</h3>
+                    <p class="company-name">PT. Niaga Utama Jaya</p>
+                    <p class="job-detail">
+                        <strong>Kualifikasi:</strong> Pria/Wanita, Teliti, Menguasai Ms. Office / Excel.<br>
+                        <strong>Lokasi:</strong> Sleman, DIY<br>
+                        <strong>Batas Akhir:</strong> 20 November 2026
+                    </p>
+                    <a href="#" class="btn-apply">Lamar Sekarang</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Pendataan Alumni -->
+        <section id="pendataan" style="margin-top: 50px;">
+            <h2 class="section-title">Form Tracer Study / Pendataan Alumni</h2>
+            <div class="form-section">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tahun">Tahun Lulus</label>
+                        <input type="number" id="tahun" name="tahun" placeholder="Contoh: 2024" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jurusan">Kompetensi Keahlian / Jurusan</label>
+                        <select id="jurusan" name="jurusan" required>
+                            <option value="">-- Pilih Jurusan --</option>
+                            <option value="TKJ">Teknik Komputer & Jaringan</option>
+                            <option value="RPL">Rekayasa Perangkat Lunak</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Status Saat Ini</label>
+                        <select id="status" name="status" required>
+                            <option value="">-- Pilih Status --</option>
+                            <option value="Bekerja">Bekerja</option>
+                            <option value="Kuliah">Kuliah</option>
+                            <option value="Wirausaha">Wirausaha</option>
+                            <option value="Mencari Kerja">Mencari Kerja</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hp">No. WhatsApp/HP</label>
+                        <input type="tel" id="hp" name="hp" placeholder="08xxxxxxxxxx" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Kirim Data Alumni</button>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="kontak">
+        <p>&copy; 2026 BKK SMK SMART AL MUHSIN KAB. BANTUL</p>
+        <p>Jl. Parangtritis Km 6, Bantul, DIY | Email: bkk@smksmartalmuhsin.sch.id</p>
+    </footer>
+
+</body>
+</html>
