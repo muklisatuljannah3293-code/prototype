@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Sekolah - SMK SMART AL MUHSIN</title>
+    <style>
+        /* Reset & Standar Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* Header / Navbar */
+        header {
+            background-color: #007bc7;
+            color: #ffffff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .brand-logo h1 {
+            font-size: 1.3rem;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-logo span {
+            font-size: 0.85rem;
+            font-weight: normal;
+            display: block;
+            color: #d1e8ff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d1e8ff;
+        }
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(rgba(0, 123, 199, 0.85), rgba(15, 23, 42, 0.85)), url('https://via.placeholder.com/1200x500') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #f0fdf4;
+        }
+
+        /* Container & Layout Utama */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #007bc7;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #007bc7;
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Card Section */
+        .card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        /* Sambutan Kepala Sekolah */
+        .sambutan-grid {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .sambutan-img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 3px solid #007bc7;
+        }
+
+        /* Visi & Misi */
+        .visi-misi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .visi-box, .misi-box {
+            background: #f0f7ff;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid #007bc7;
+        }
+
+        .visi-box h3, .misi-box h3 {
+            color: #007bc7;
+            margin-bottom: 15px;
+        }
+
+        .misi-box ul {
+            padding-left: 20px;
+        }
+
+        .misi-box li {
+            margin-bottom: 8px;
+        }
+
+        /* Jurusan / Program Keahlian */
+        .jurusan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .jurusan-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .jurusan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+
+        .jurusan-card h3 {
+            color: #007bc7;
+            margin-bottom: 10px;
+        }
+
+        /* Identitas Tabel */
+        .table-identitas {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-identitas td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .table-identitas td:first-child {
+            font-weight: bold;
+            width: 30%;
+            color: #475569;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0f172a;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+            color: #94a3b8;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .sambutan-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .sambutan-img {
+                max-width: 200px;
+                margin: 0 auto;
+            }
+
+            .table-identitas td {
+                display: block;
+                width: 100% !important;
+            }
+
+            .table-identitas td:first-child {
+                background-color: #f1f5f9;
+                padding-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigasi -->
+    <header>
+        <div class="brand-logo">
+            <h1>SMK SMART AL MUHSIN</h1>
+            <span>Kabupaten Bantul, D.I. Yogyakarta</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#sambutan">Sambutan</a></li>
+                <li><a href="#visimisi">Visi & Misi</a></li>
+                <li><a href="#jurusan">Jurusan</a></li>
+                <li><a href="#identitas">Identitas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="beranda">
+        <h2>Selamat Datang di SMK SMART AL MUHSIN</h2>
+        <p>Mewujudkan Generasi Unggul, Berkarakter Islami, Cerdas, dan Siap Kerja di Era Digital.</p>
+    </section>
+
+    <div class="container">
+
+        <!-- Sambutan Kepala Sekolah -->
+        <section id="sambutan" class="card">
+            <h2 class="section-title">Sambutan Kepala Sekolah</h2>
+            <div class="sambutan-grid">
+                <img src="kepsek.jpg" alt="Kepala Sekolah SMK SMART AL MUHSIN" class="sambutan-img">
+                <div>
+                    <h3 style="color: #007bc7; margin-bottom: 10px;">Assalamu’alaikum Warahmatullahi Wabarakatuh</h3>
+                    <p>Selamat datang di website resmi SMK SMART AL MUHSIN Bantul. Kami berkomitmen untuk menyelenggarakan pendidikan kejuruan yang berkualitas tinggi dengan memadukan kompetensi keahlian teknologi dan nilai-nilai karakter pesantren.</p>
+                    <br>
+                    <p>Melalui program pembelajaran yang relevan dengan kebutuhan dunia usaha dan dunia industri (DUDI), kami siap membimbing siswa-siswi menjadi lulusan yang mandiri, profesional, dan berakhlakul karimah.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visi dan Misi -->
+        <section id="visimisi" class="card">
+            <h2 class="section-title">Visi & Misi</h2>
+            <div class="visi-misi-grid">
+                <div class="visi-box">
+                    <h3>VISI</h3>
+                    <p>"Menjadi Sekolah Menengah Kejuruan unggulan yang menghasilkan lulusan berintegritas, terampil dalam teknologi, berjiwa wirausaha, serta berakar pada nilai-nilai keislaman."</p>
+                </div>
+                <div class="misi-box">
+                    <h3>MISI</h3>
+                    <ul>
+                        <li>Menyelenggarakan pendidikan kejuruan berbasis kompetensi teknologi modern.</li>
+                        <li>Menanamkan nilai-nilai keislaman dan pembentukan karakter peserta didik.</li>
+                        <li>Menjalin kerja sama erat dengan Dunia Kerja dan Dunia Industri (DUDI).</li>
+                        <li>Mendorong jiwa kewirausahaan (entrepreneurship) yang kreatif dan inovatif.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Program Keahlian / Jurusan -->
+        <section id="jurusan" class="card">
+            <h2 class="section-title">Program Keahlian</h2>
+            <div class="jurusan-grid">
+                <div class="jurusan-card">
+                    <h3>Teknik Komputer & Jaringan</h3>
+                    <p>Fokus pada penguasaan perakitan komputer, instalasi jaringan, administrasi server, Mikrotik, serta keamanan jaringan komputer.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Identitas Sekolah -->
+        <section id="identitas" class="card">
+            <h2 class="section-title">Identitas Sekolah</h2>
+            <table class="table-identitas">
+                <tr>
+                    <td>Nama Sekolah</td>
+                    <td>SMK SMART AL MUHSIN</td>
+                </tr>
+                <tr>
+                    <td>Yayasan</td>
+                    <td>Yayasan Pesantren Aji Mahasiswa Al-Muhsin</td>
+                </tr>
+                <tr>
+                    <td>Kabupaten/Kota</td>
+                    <td>Kabupaten Bantul</td>
+                </tr>
+                <tr>
+                    <td>Provinsi</td>
+                    <td>D.I. Yogyakarta</td>
+                </tr>
+                <tr>
+                    <td>Alamat Lengkap</td>
+                    <td>Jl. Parangtritis Km. 6, Krapyak, Bantul, D.I. Yogyakarta</td>
+                </tr>
+                <tr>
+                    <td>Email Resmi</td>
+                    <td>info@smksmartalmuhsin.sch.id</td>
+                </tr>
+            </table>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 SMK SMART AL MUHSIN KABUPATEN BANTUL. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
